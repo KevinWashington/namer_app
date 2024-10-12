@@ -23,7 +23,7 @@ class GeneratorPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            flex: 3,
+            flex: 2,
             child: HistoryListView(),
           ),
           SizedBox(height: 10),
