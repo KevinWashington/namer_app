@@ -20,7 +20,7 @@ class BigCard extends StatelessWidget {
       color: theme.colorScheme.primary,
       child: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Text(pair.asLowerCase, style: style, semanticsLabel: "${pair.first} ${pair.second}"),
+        child: Text(pair.asLowerCase, style: style, semanticsLabel: "${pair.first} uau ${pair.second}".toUpperCase()),
       ),
     );
   }

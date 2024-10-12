@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:namer_app/controller/myAppState.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +25,12 @@ class FavoritesPage extends StatelessWidget {
         ),
         for (var pair in appState.favorites)
           ListTile(
-            leading: Icon(Icons.favorite),
+            leading: OutlinedButton(
+              onPressed: () {
+                  appState.toggleFavorite(pair);
+              },
+              child: Icon(Icons.delete),
+            ),
             title: Text(pair.asLowerCase),
           ),
       ],
