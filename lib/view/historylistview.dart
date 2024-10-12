@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:namer_app/controller/myAppState.dart';
+import 'package:namer_app/controller/appstate.dart';
 import 'package:provider/provider.dart';
 
 class HistoryListView extends StatefulWidget {

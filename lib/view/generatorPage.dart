@@ -1,7 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:namer_app/controller/myAppState.dart';
-import 'package:namer_app/view/bigCard.dart';
+import 'package:namer_app/controller/appstate.dart';
+import 'package:namer_app/view/bigcard.dart';
 import 'package:namer_app/view/historylistview.dart';
 import 'package:provider/provider.dart';
 

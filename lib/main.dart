@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:namer_app/controller/myAppState.dart';
-import 'package:namer_app/view/homePage.dart';
+import 'package:namer_app/controller/appstate.dart';
+import 'package:namer_app/view/homepage.dart';
 import 'package:provider/provider.dart';
 
 void main() {

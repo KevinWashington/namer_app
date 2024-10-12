@@ -1,6 +1,7 @@
+// ignore_for_file: file_names
 import 'package:flutter/material.dart';
-import 'package:namer_app/view/favoritePage.dart';
-import 'package:namer_app/view/generatorPage.dart';
+import 'package:namer_app/view/favoritepage.dart';
+import 'package:namer_app/view/generatorpage.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
