@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
@@ -30,5 +32,9 @@ class MyAppState extends ChangeNotifier {
   void removeFavorite(WordPair pair) {
     favorites.remove(pair);
     notifyListeners();
+  }
+
+  void editFavorite(Char edition ,WordPair pair) {
+    // favorites(pair)
   }
 }

@@ -30,26 +30,47 @@ class FavoritesPage extends StatelessWidget {
             elevation: 2,
             child: ListTile(
               leading: Icon(Icons.text_fields),
-              title: Text(
-                pair.asLowerCase,
-                style: TextStyle(
-                  fontSize: 18, 
-                  fontWeight: FontWeight.bold,
-                  color: Theme.of(context).primaryColor, 
-                ),
-              ),
-              trailing: TextButton(
-                  style: TextButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(topLeft: Radius.zero, topRight: Radius.circular(15), bottomRight: Radius.circular(15), bottomLeft: Radius.zero)
-                    )
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    pair.asLowerCase,
+                    style: TextStyle(
+                      fontSize: 18, 
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).primaryColor, 
+                    ),
                   ),
-                  onPressed: () {
-                      appState.toggleFavorite(pair);
-                  },
-                  child: Icon(Icons.delete, color: Colors.red,),
-                ),
+                  Row(
+                    children: [
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.zero)
+                          )
+                        ),
+                        onPressed: () {
+                          appState.toggleFavorite(pair);
+                        },
+                        child: Icon(Icons.edit, color: Colors.grey,),
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(topLeft: Radius.zero, topRight: Radius.circular(15), bottomRight: Radius.circular(15), bottomLeft: Radius.zero)
+                          )
+                        ),
+                        onPressed: () {
+                          appState.removeFavorite(pair);
+                        },
+                        child: Icon(Icons.delete, color: Colors.red,),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
               contentPadding: EdgeInsets.only(right: 0, left: 15),
             ),
           ),
